@@ -36,6 +36,18 @@ app.use(
     limit: "5mb",
   })
 );
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    console.error("MongoDB connection failed:", error);
+    res.status(500).json({
+      success: false,
+      message: "Database connection failed",
+    });
+  }
+});
 
 // ======================================================
 // ROUTES
@@ -106,18 +118,6 @@ const connectDB = async () => {
 };
 
 // Connect to MongoDB before handling API requests
-app.use(async (req, res, next) => {
-  try {
-    await connectDB();
-    next();
-  } catch (error) {
-    console.error("MongoDB connection failed:", error);
-    res.status(500).json({
-      success: false,
-      message: "Database connection failed",
-    });
-  }
-});
 
 // Local development
 if (process.env.VERCEL !== "1") {
