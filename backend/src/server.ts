@@ -89,38 +89,49 @@ app.get("/api/health", (req, res) => {
 // DATABASE + SERVER
 // ======================================================
 
-const PORT =
-  process.env.PORT || 5001;
-
-const MONGODB_URI =
-  process.env.MONGODB_URI;
+const PORT = process.env.PORT || 5001;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
-  console.error(
-    "MONGODB_URI is missing from .env"
-  );
-
-  process.exit(1);
+  throw new Error("MONGODB_URI is missing");
 }
 
-mongoose
-  .connect(MONGODB_URI)
-  .then(() => {
-    console.log(
-      "MongoDB connected successfully"
-    );
+const connectDB = async () => {
+  if (mongoose.connection.readyState === 1) {
+    return;
+  }
 
-    app.listen(PORT, () => {
-      console.log(
-        `Server running on http://localhost:${PORT}`
-      );
+  await mongoose.connect(MONGODB_URI);
+  console.log("MongoDB connected successfully");
+};
+
+// Connect to MongoDB before handling API requests
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    console.error("MongoDB connection failed:", error);
+    res.status(500).json({
+      success: false,
+      message: "Database connection failed",
     });
-  })
-  .catch((error) => {
-    console.error(
-      "MongoDB connection failed:",
-      error
-    );
+  }
+});
 
-    process.exit(1);
-  });
+// Local development
+if (process.env.VERCEL !== "1") {
+  connectDB()
+    .then(() => {
+      app.listen(PORT, () => {
+        console.log(`Server running on http://localhost:${PORT}`);
+      });
+    })
+    .catch((error) => {
+      console.error("MongoDB connection failed:", error);
+      process.exit(1);
+    });
+}
+
+// Export Express app for Vercel
+export default app;
