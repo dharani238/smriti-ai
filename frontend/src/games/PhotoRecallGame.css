@@ -1,0 +1,585 @@
+.photo-recall-page {
+  min-height: 100vh;
+  background: #f7f4ec;
+  color: #173f34;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.photo-recall-header {
+  min-height: 78px;
+  padding: 0 5%;
+  background: #ffffff;
+  border-bottom: 1px solid #e7e2d6;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.photo-recall-back,
+.photo-recall-home,
+.photo-recall-brand {
+  border: 0;
+  background: transparent;
+  color: #214b40;
+  cursor: pointer;
+  font: inherit;
+}
+
+.photo-recall-back {
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 700;
+}
+
+.photo-recall-home {
+  justify-self: end;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ded8ca;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.photo-recall-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-align: left;
+}
+
+.photo-recall-brand-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  background: #e4b84f;
+  color: #173f34;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.photo-recall-brand strong,
+.photo-recall-brand span {
+  display: block;
+}
+
+.photo-recall-brand strong {
+  font-size: 18px;
+  letter-spacing: 0.04em;
+}
+
+.photo-recall-brand span {
+  margin-top: 2px;
+  color: #6c7771;
+  font-size: 12px;
+}
+
+.photo-recall-content {
+  width: min(1050px, 92%);
+  margin: 0 auto;
+  padding: 46px 0 70px;
+}
+
+.photo-recall-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.photo-recall-eyebrow,
+.photo-recall-panel-eyebrow {
+  display: block;
+  color: #a67816;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.photo-recall-title h1 {
+  margin: 8px 0 9px;
+  color: #153f34;
+  font-size: clamp(34px, 5vw, 48px);
+  line-height: 1.05;
+}
+
+.photo-recall-title p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #68736d;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.photo-recall-panel,
+.photo-recall-game-panel {
+  background: #ffffff;
+  border: 1px solid #e2ddd1;
+  border-radius: 24px;
+  box-shadow: 0 14px 40px rgba(31, 58, 49, 0.07);
+}
+
+.photo-recall-panel {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 44px;
+}
+
+.photo-recall-centered,
+.photo-recall-ready,
+.photo-recall-complete {
+  text-align: center;
+}
+
+.photo-recall-large-icon {
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 22px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  background: #f6ecd1;
+  color: #9b7118;
+}
+
+.photo-recall-panel h2 {
+  margin: 10px 0;
+  color: #173f34;
+  font-size: 29px;
+}
+
+.photo-recall-panel > p {
+  max-width: 590px;
+  margin: 0 auto 27px;
+  color: #6c7671;
+  line-height: 1.7;
+}
+
+.photo-recall-difficulty {
+  margin: 30px 0;
+  padding: 22px;
+  background: #faf8f2;
+  border: 1px solid #e8e1d3;
+  border-radius: 18px;
+}
+
+.photo-recall-difficulty > span {
+  display: block;
+  margin-bottom: 13px;
+  color: #294f44;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.photo-recall-difficulty-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.photo-difficulty-button {
+  min-width: 105px;
+  padding: 11px 18px;
+  border: 1px solid #d9d4c8;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #31564b;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.photo-difficulty-selected {
+  background: #174c3e;
+  border-color: #174c3e;
+  color: #ffffff;
+}
+
+.photo-recall-ready-info {
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  color: #5f6d67;
+}
+
+.photo-recall-ready-info span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.photo-recall-ready-actions,
+.photo-recall-complete-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.photo-recall-primary,
+.photo-recall-secondary,
+.photo-recall-listen {
+  min-height: 48px;
+  padding: 0 21px;
+  border-radius: 12px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.photo-recall-primary {
+  border: 1px solid #174c3e;
+  background: #174c3e;
+  color: #ffffff;
+}
+
+.photo-recall-secondary,
+.photo-recall-listen {
+  border: 1px solid #d5d0c4;
+  background: #ffffff;
+  color: #214c40;
+}
+
+.photo-recall-status {
+  margin-bottom: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.photo-recall-status > div {
+  min-height: 80px;
+  padding: 15px 18px;
+  background: #ffffff;
+  border: 1px solid #e2ddd1;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photo-recall-status span {
+  color: #8a938e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.photo-recall-status strong {
+  margin-top: 4px;
+  color: #17483b;
+  font-size: 20px;
+}
+
+.photo-recall-game-panel {
+  padding: 34px;
+}
+
+.photo-recall-game-heading {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.photo-recall-game-heading h2 {
+  margin: 7px 0 0;
+  color: #173f34;
+  font-size: 29px;
+}
+
+.photo-recall-countdown {
+  min-width: 125px;
+  padding: 12px 15px;
+  border: 1px solid #e0d9c9;
+  border-radius: 13px;
+  background: #faf7ef;
+  color: #294f44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.photo-recall-countdown strong {
+  font-size: 21px;
+}
+
+.photo-recall-countdown span {
+  font-size: 12px;
+}
+
+.photo-recall-photo {
+  width: min(610px, 100%);
+  height: 470px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #eceae3;
+  border: 1px solid #ded9ce;
+}
+
+.photo-recall-photo img,
+.photo-recall-feedback-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.photo-recall-gentle-note {
+  margin: 20px 0 0;
+  color: #6d7772;
+  text-align: center;
+}
+
+.photo-recall-hidden-photo {
+  width: min(610px, 100%);
+  min-height: 300px;
+  margin: 0 auto 25px;
+  border: 1px dashed #cfc7b5;
+  border-radius: 20px;
+  background: #f8f6f0;
+  color: #7c857f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.photo-recall-hidden-photo svg {
+  color: #a47a1c;
+}
+
+.photo-recall-hidden-photo strong {
+  color: #294f44;
+  font-size: 19px;
+}
+
+.photo-recall-options {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px;
+}
+
+.photo-recall-option {
+  min-height: 66px;
+  padding: 12px 18px;
+  border: 2px solid #ddd8cc;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #214c40;
+  font: inherit;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.photo-recall-option:hover {
+  border-color: #547b6f;
+  background: #f7faf8;
+}
+
+.photo-recall-feedback-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.95fr) minmax(320px, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.photo-recall-feedback-photo {
+  min-height: 410px;
+  overflow: hidden;
+  border-radius: 19px;
+  background: #eceae3;
+}
+
+.photo-recall-feedback-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photo-recall-feedback-message {
+  margin-bottom: 22px;
+  padding: 15px;
+  border: 1px solid #eadbb8;
+  border-radius: 14px;
+  background: #fcf8ee;
+  color: #9a711d;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.photo-recall-feedback-correct {
+  border-color: #c7ddd4;
+  background: #f0f7f4;
+  color: #21624f;
+}
+
+.photo-recall-feedback-message strong,
+.photo-recall-feedback-message span {
+  display: block;
+}
+
+.photo-recall-feedback-message span {
+  margin-top: 2px;
+  color: #68736d;
+  font-size: 13px;
+}
+
+.photo-recall-memory-category {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f4ecd7;
+  color: #8b6819;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.photo-recall-feedback-copy h3 {
+  margin: 12px 0 8px;
+  color: #173f34;
+  font-size: 27px;
+}
+
+.photo-recall-feedback-copy > p {
+  margin: 0;
+  color: #68736d;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.photo-recall-next {
+  width: fit-content;
+  margin-top: 25px;
+}
+
+.photo-recall-results {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.photo-recall-results > div {
+  padding: 18px 10px;
+  border: 1px solid #e6e0d4;
+  border-radius: 14px;
+  background: #f8f6f0;
+}
+
+.photo-recall-results span,
+.photo-recall-results strong {
+  display: block;
+}
+
+.photo-recall-results span {
+  color: #7a847f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.photo-recall-results strong {
+  margin-top: 5px;
+  color: #17483b;
+  font-size: 20px;
+}
+
+.photo-recall-save-status {
+  display: block;
+  margin-top: 17px;
+  color: #68756f;
+  font-size: 13px;
+}
+
+@media (max-width: 780px) {
+  .photo-recall-header {
+    padding: 12px 4%;
+    grid-template-columns: 1fr auto;
+  }
+
+  .photo-recall-brand {
+    display: none;
+  }
+
+  .photo-recall-content {
+    padding-top: 30px;
+  }
+
+  .photo-recall-status {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo-recall-panel,
+  .photo-recall-game-panel {
+    padding: 24px 18px;
+  }
+
+  .photo-recall-game-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .photo-recall-photo {
+    height: 380px;
+  }
+
+  .photo-recall-options {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-recall-feedback-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-recall-feedback-photo {
+    min-height: 370px;
+  }
+
+  .photo-recall-results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .photo-recall-difficulty-options {
+    flex-direction: column;
+  }
+
+  .photo-difficulty-button {
+    width: 100%;
+  }
+
+  .photo-recall-ready-actions,
+  .photo-recall-complete-actions {
+    flex-direction: column;
+  }
+
+  .photo-recall-primary,
+  .photo-recall-secondary {
+    width: 100%;
+  }
+
+  .photo-recall-photo,
+  .photo-recall-feedback-photo {
+    height: 320px;
+    min-height: 320px;
+  }
+}

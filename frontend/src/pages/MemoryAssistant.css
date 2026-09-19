@@ -1,0 +1,1002 @@
+/* =========================================================
+   SMRITI MEMORY COMPANION
+   ========================================================= */
+
+.smriti-assistant-page {
+  min-height: 100vh;
+  background: #f5f6f1;
+  color: #17372f;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.smriti-assistant-header {
+  height: 88px;
+  padding: 0 48px;
+  background: #ffffff;
+  border-bottom: 1px solid #dfe6df;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.smriti-assistant-brand {
+  border: none;
+  background: transparent;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  cursor: pointer;
+  color: #17372f;
+  text-align: left;
+}
+
+.smriti-assistant-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+
+  background: #f4c965;
+  color: #17372f;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.smriti-assistant-brand > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.smriti-assistant-brand strong {
+  font-size: 23px;
+  letter-spacing: 0.04em;
+}
+
+.smriti-assistant-brand small {
+  color: #708079;
+  font-size: 13px;
+}
+
+.smriti-assistant-home {
+  min-height: 46px;
+  padding: 0 20px;
+
+  border: 1px solid #d7dfd9;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #24483e;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.smriti-assistant-home:hover {
+  background: #f4f7f3;
+  border-color: #bdcbc3;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.smriti-assistant-content {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 42px 0 64px;
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.smriti-assistant-intro {
+  margin-bottom: 28px;
+}
+
+.smriti-assistant-back {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #47665d;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.smriti-assistant-back:hover {
+  color: #164d3e;
+}
+
+.smriti-assistant-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.smriti-assistant-main-icon {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+
+  border-radius: 22px;
+  background: #e5f1ec;
+  color: #17634f;
+
+  display: grid;
+  place-items: center;
+}
+
+.smriti-assistant-eyebrow {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #28745f;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.smriti-assistant-title h1 {
+  margin: 0;
+
+  color: #15372e;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.smriti-assistant-title p {
+  max-width: 620px;
+  margin: 10px 0 0;
+
+  color: #66776f;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   MEMORY STATUS
+   ========================================================= */
+
+.smriti-memory-status {
+  padding: 20px 24px;
+  margin-bottom: 24px;
+
+  border: 1px solid #dce5df;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.smriti-status-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.smriti-status-icon {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 13px;
+  background: #eaf4f0;
+  color: #17634f;
+
+  display: grid;
+  place-items: center;
+}
+
+.smriti-status-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.smriti-status-item strong {
+  color: #163b31;
+  font-size: 21px;
+  line-height: 1.1;
+}
+
+.smriti-status-item div span {
+  margin-top: 3px;
+  color: #718078;
+  font-size: 13px;
+}
+
+.smriti-connected-message {
+  margin-left: auto;
+  padding: 11px 15px;
+
+  border-radius: 12px;
+  background: #fff8e7;
+  color: #7d611c;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   MAIN CONVERSATION CARD
+   ========================================================= */
+
+.smriti-conversation-card {
+  padding: 34px;
+
+  border: 1px solid #dce4de;
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-shadow: 0 14px 40px rgba(25, 55, 46, 0.06);
+}
+
+.smriti-companion-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.smriti-companion-avatar,
+.smriti-answer-avatar {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+
+  border-radius: 15px;
+
+  background: #174f40;
+  color: #ffffff;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.smriti-companion-heading > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.smriti-companion-heading span {
+  color: #a57717;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.smriti-companion-heading h2 {
+  margin: 4px 0 0;
+
+  color: #15382f;
+  font-size: 25px;
+  letter-spacing: -0.02em;
+}
+
+.smriti-companion-description {
+  max-width: 760px;
+  margin: 17px 0 27px;
+
+  color: #66776f;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   LOADING / ERROR / EMPTY
+   ========================================================= */
+
+.smriti-loading {
+  min-height: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: #597169;
+  font-weight: 600;
+}
+
+.smriti-loading-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  background: #1f6a56;
+
+  animation: smritiPulse 1.2s infinite ease-in-out;
+}
+
+@keyframes smritiPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.smriti-error {
+  margin-bottom: 22px;
+  padding: 14px 16px;
+
+  border: 1px solid #e8c6c1;
+  border-radius: 12px;
+
+  background: #fff4f2;
+  color: #8a3d34;
+
+  font-size: 14px;
+}
+
+.smriti-empty-data {
+  margin-bottom: 24px;
+  padding: 17px;
+
+  border-radius: 15px;
+  background: #f6f8f5;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  color: #517067;
+}
+
+.smriti-empty-data > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.smriti-empty-data strong {
+  color: #23483e;
+  font-size: 14px;
+}
+
+.smriti-empty-data span {
+  color: #728078;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   QUESTION AREA
+   ========================================================= */
+
+.smriti-question-area {
+  padding: 25px;
+
+  border: 1px solid #dce4de;
+  border-radius: 18px;
+
+  background: #f9faf7;
+}
+
+.smriti-question-label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #25483e;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.smriti-question-box {
+  min-height: 62px;
+
+  padding: 7px 7px 7px 17px;
+
+  border: 1px solid #ccd8d1;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #6b7e76;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.smriti-question-box:focus-within {
+  border-color: #4c8a78;
+  box-shadow: 0 0 0 3px rgba(37, 112, 90, 0.1);
+}
+
+.smriti-question-box input {
+  min-width: 0;
+  flex: 1;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: #183c32;
+
+  font: inherit;
+  font-size: 16px;
+}
+
+.smriti-question-box input::placeholder {
+  color: #96a39d;
+}
+
+.smriti-ask-button {
+  min-height: 47px;
+  padding: 0 25px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: #174f40;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.smriti-ask-button:hover:not(:disabled) {
+  background: #0f4134;
+  transform: translateY(-1px);
+}
+
+.smriti-ask-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   VOICE
+   ========================================================= */
+
+.smriti-voice-row {
+  margin-top: 15px;
+  padding: 14px 15px;
+
+  border-radius: 13px;
+  background: #edf4f0;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.smriti-voice-icon {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: #ffffff;
+  color: #1c6753;
+
+  display: grid;
+  place-items: center;
+}
+
+.smriti-voice-row > div:nth-child(2) {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.smriti-voice-row strong {
+  color: #244b40;
+  font-size: 13px;
+}
+
+.smriti-voice-row span {
+  color: #71827a;
+  font-size: 12px;
+}
+
+/* =========================================================
+   EXISTING VOICE BUTTON SUPPORT
+   ========================================================= */
+
+.smriti-voice-row button {
+  min-height: 43px;
+  padding: 0 17px;
+
+  border: 1px solid #bdd0c6;
+  border-radius: 11px;
+
+  background: #ffffff;
+  color: #175743;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.smriti-voice-row button:hover {
+  background: #f6faf8;
+}
+
+/* =========================================================
+   SUGGESTIONS
+   ========================================================= */
+
+.smriti-suggestions {
+  margin-top: 24px;
+}
+
+.smriti-suggestions > span {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #7d8b84;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.smriti-suggestion-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.smriti-suggestion-list button {
+  padding: 10px 14px;
+
+  border: 1px solid #d6e0da;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #31594e;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.smriti-suggestion-list button:hover {
+  background: #eef5f1;
+  border-color: #a9c4b7;
+}
+
+/* =========================================================
+   THINKING
+   ========================================================= */
+
+.smriti-thinking {
+  margin-top: 25px;
+  padding: 17px 18px;
+
+  border-radius: 14px;
+
+  background: #f4f7f4;
+  color: #41665b;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   ANSWER
+   ========================================================= */
+
+.smriti-answer {
+  margin-top: 26px;
+  padding: 25px;
+
+  border: 1px solid #cfe0d7;
+  border-radius: 18px;
+
+  background: #f4f8f5;
+}
+
+.smriti-answer-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.smriti-answer-avatar {
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  font-size: 18px;
+}
+
+.smriti-answer-heading > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.smriti-answer-heading span {
+  color: #a27418;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.smriti-answer-heading strong {
+  color: #23493e;
+  font-size: 14px;
+}
+
+.smriti-answer > p {
+  margin: 19px 0;
+
+  color: #203e36;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   SOURCE CARD
+   ========================================================= */
+
+.smriti-source-card {
+  margin: 18px 0;
+  padding: 12px;
+
+  border: 1px solid #d7e2dc;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.smriti-source-card img,
+.smriti-source-placeholder {
+  width: 78px;
+  height: 78px;
+  flex-shrink: 0;
+
+  border-radius: 12px;
+}
+
+.smriti-source-card img {
+  object-fit: cover;
+  background: #e8ece9;
+}
+
+.smriti-source-placeholder {
+  background: #e8f2ed;
+  color: #236650;
+
+  display: grid;
+  place-items: center;
+}
+
+.smriti-source-card > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.smriti-source-card span {
+  margin-bottom: 4px;
+
+  color: #9a741e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.smriti-source-card strong {
+  color: #193d33;
+  font-size: 17px;
+}
+
+.smriti-source-card small {
+  margin-top: 4px;
+
+  color: #718078;
+  font-size: 13px;
+}
+
+/* =========================================================
+   READ ALOUD
+   ========================================================= */
+
+.smriti-read-button {
+  min-height: 45px;
+  padding: 0 17px;
+
+  border: 1px solid #aec8bc;
+  border-radius: 11px;
+
+  background: #ffffff;
+  color: #175743;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.smriti-read-button:hover {
+  background: #edf5f1;
+}
+
+/* =========================================================
+   NOTE
+   ========================================================= */
+
+.smriti-assistant-note {
+  margin-top: 18px;
+  padding: 17px 20px;
+
+  border: 1px solid #e2e5da;
+  border-radius: 15px;
+
+  background: #fffdf6;
+  color: #68756e;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.smriti-assistant-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+
+  color: #aa7b1b;
+}
+
+.smriti-assistant-note p {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .smriti-assistant-header {
+    padding: 0 24px;
+  }
+
+  .smriti-assistant-content {
+    width: min(
+      100% - 32px,
+      1120px
+    );
+  }
+
+  .smriti-memory-status {
+    flex-wrap: wrap;
+  }
+
+  .smriti-connected-message {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* =========================================================
+   MOBILE / ELDER-FRIENDLY
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .smriti-assistant-header {
+    height: 76px;
+    padding: 0 16px;
+  }
+
+  .smriti-assistant-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 13px;
+    font-size: 21px;
+  }
+
+  .smriti-assistant-brand strong {
+    font-size: 19px;
+  }
+
+  .smriti-assistant-brand small {
+    display: none;
+  }
+
+  .smriti-assistant-home {
+    padding: 0 13px;
+  }
+
+  .smriti-assistant-home span {
+    display: none;
+  }
+
+  .smriti-assistant-content {
+    width: calc(100% - 24px);
+    padding-top: 26px;
+  }
+
+  .smriti-assistant-title {
+    align-items: flex-start;
+  }
+
+  .smriti-assistant-main-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 17px;
+  }
+
+  .smriti-assistant-title h1 {
+    font-size: 31px;
+  }
+
+  .smriti-assistant-title p {
+    font-size: 15px;
+  }
+
+  .smriti-memory-status {
+    padding: 17px;
+    gap: 18px;
+  }
+
+  .smriti-status-item {
+    width: calc(50% - 9px);
+  }
+
+  .smriti-conversation-card {
+    padding: 20px;
+    border-radius: 19px;
+  }
+
+  .smriti-companion-heading h2 {
+    font-size: 21px;
+  }
+
+  .smriti-question-area {
+    padding: 15px;
+  }
+
+  .smriti-question-box {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .smriti-question-box > svg {
+    display: none;
+  }
+
+  .smriti-question-box input {
+    width: 100%;
+    flex-basis: 100%;
+    min-height: 45px;
+    padding: 0 5px;
+
+    font-size: 17px;
+  }
+
+  .smriti-ask-button {
+    width: 100%;
+    min-height: 52px;
+  }
+
+  .smriti-voice-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .smriti-voice-row > div:nth-child(2) {
+    min-width: calc(100% - 55px);
+  }
+
+  .smriti-voice-row > button {
+    width: 100%;
+    min-height: 50px;
+  }
+
+  .smriti-suggestion-list {
+    flex-direction: column;
+  }
+
+  .smriti-suggestion-list button {
+    min-height: 48px;
+    border-radius: 12px;
+    text-align: left;
+  }
+
+  .smriti-answer {
+    padding: 19px;
+  }
+
+  .smriti-answer > p {
+    font-size: 17px;
+  }
+
+  .smriti-source-card img,
+  .smriti-source-placeholder {
+    width: 65px;
+    height: 65px;
+  }
+
+  .smriti-read-button {
+    width: 100%;
+    min-height: 51px;
+    justify-content: center;
+  }
+}
